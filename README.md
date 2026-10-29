@@ -79,9 +79,4 @@ index.html           frontend (unchanged from the C++ version)
 | POST | `/doc/ask` | `{"question","k"}`: retrieve and generate |
 | GET | `/status` | Ollama status and models |
 
-## Differences from the C++ version
 
-- JSON is parsed properly (nesting, `\uXXXX` escapes) instead of string scanning.
-- HNSW levels use Java's `Random(42)`, so the upper-layer shape can differ from the C++ build. Search results are identical on the demo data.
-- Compiles and runs the same on Windows, Linux and macOS. No `-lws2_32` flag.
-- Like the original, data lives in memory and is lost on restart.
